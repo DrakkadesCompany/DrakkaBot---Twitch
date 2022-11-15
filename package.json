@@ -1,0 +1,10 @@
+{
+  "name": "DrakkaBot",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node src/Drakkabot.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  }
+}
