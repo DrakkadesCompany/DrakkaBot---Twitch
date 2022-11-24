@@ -8,7 +8,7 @@ const client = new tmi.Client({
     },
     identity: {
         username: "Drakkabot",
-        password: "o4p70ta6f3jso41rlie3rhbvp1jf65"
+        password: env.TWITCH_OAUTH_CODE
     },
     channels: [ 'Drakkades' ]
 });
