@@ -8,15 +8,16 @@ const client = new tmi.Client({
     },
     identity: {
         username: "Drakkabot",
-        password: env.TWITCH_OAUTH_CODE
+        password: process.env.TWITCH_OAUTH_CODE
     },
     channels: [ 'Drakkades' ]
 });
 
 client.connect();
+console.log("App Started");
+
 
 client.on('message', (channel, tags, message, self) => {
-
     if(self) return;
 
     const args = message.slice(1).split(' ');
