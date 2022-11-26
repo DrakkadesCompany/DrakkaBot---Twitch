@@ -42,6 +42,6 @@ client.on('message', (channel, tags, message, self) => {
         client.say(channel, `${tags.username}, tu as eu ${result}.`);
     } else if(command === 'rs') {
     const result = Math.floor(Math.random() * 6) + 1;
-    client.say(channel, `Instragam: https://www.instagram.com/drakkades/ Twitter: https://twitter.com/Drakkades Discord: https://discord.gg/Kv9wzS8 Youtube: https://www.youtube.com/@drakkades VOD: https://www.youtube.com/@drakkadesvod`);
+    client.say(channel, `Mes réseaux: Instragam: https://www.instagram.com/drakkades/ Twitter: https://twitter.com/Drakkades Discord: https://discord.gg/Kv9wzS8 Youtube: https://www.youtube.com/@drakkades VOD: https://www.youtube.com/@drakkadesvod`);
 }
 });
