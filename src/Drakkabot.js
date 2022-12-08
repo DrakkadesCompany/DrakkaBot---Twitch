@@ -66,7 +66,7 @@ client.on('message', (channel, tags, message, self) => {
 });
 
 client.on("connected", (address, port) => {
-    setInterval(executeAutoMessages, 1000 * 5);
+    setInterval(executeAutoMessages, 1000 * 60 * 35);
 });
 
 function executeAutoMessages() {
