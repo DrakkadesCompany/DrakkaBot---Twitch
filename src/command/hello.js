@@ -7,8 +7,17 @@ const aliases = [
 
 class Hello {
 
+    constructor() {
+        this.lastUsage = new Date();
+    }
+
     execute(client, tags, message, channel) {
-        client.say(channel, `SALUT A TOI ${tags.username}, j'espère que tu vas bien!`);
+        let actualDate = new Date();
+
+        if (actualDate.getSeconds() > this.lastUsage.getSeconds() + 5) {
+            client.say(channel, `SALUT A TOI ${tags.username}, j'espère que tu vas bien!`);
+            this.lastUsage = actualDate;
+        }
     }
 
     isValid(command) {

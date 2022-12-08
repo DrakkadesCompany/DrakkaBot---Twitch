@@ -5,9 +5,18 @@ const aliases = [
 
 class Dice {
 
+    constructor() {
+        this.lastUsage = new Date();
+    }
+
     execute(client, tags, message, channel) {
-        const result = Math.floor(Math.random() * 6) + 1;
-        client.say(channel, `${tags.username}, tu as eu ${result}.`);
+        let actualDate = new Date();
+
+        if (actualDate.getSeconds() > this.lastUsage.getSeconds() + 5) {
+            const result = Math.floor(Math.random() * 6) + 1;
+            client.say(channel, `${tags.username}, tu as eu ${result}.`);
+            this.lastUsage = actualDate;
+        }
     }
 
     isValid(command) {

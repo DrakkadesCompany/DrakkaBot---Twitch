@@ -5,8 +5,17 @@ const aliases = [
 
 class Twitter {
 
+    constructor() {
+        this.lastUsage = new Date();
+    }
+
     execute(client, tags, message, channel) {
-        client.say(channel, `Mon twitter: https://twitter.com/Drakkades`);
+        let actualDate = new Date();
+
+        if (actualDate.getSeconds() > this.lastUsage.getSeconds() + 5) {
+            client.say(channel, `Mon twitter: https://twitter.com/Drakkades`);
+            this.lastUsage = actualDate;
+        }
     }
 
     isValid(command) {

@@ -4,8 +4,17 @@ const aliases = [
 
 class Discord {
 
+    constructor() {
+        this.lastUsage = new Date();
+    }
+
     execute(client, tags, message, channel) {
-        client.say(channel, `Mon discord: https://discord.gg/Kv9wzS8`);
+        let actualDate = new Date();
+
+        if (actualDate.getSeconds() > this.lastUsage.getSeconds() + 5) {
+            client.say(channel, `Mon discord: https://discord.gg/Kv9wzS8`);
+            this.lastUsage = actualDate;
+        }
     }
 
     isValid(command) {

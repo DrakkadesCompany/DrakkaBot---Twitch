@@ -6,8 +6,17 @@ const aliases = [
 
 class Instagram {
 
+    constructor() {
+        this.lastUsage = new Date();
+    }
+
     execute(client, tags, message, channel) {
-        client.say(channel, `Mon insta: https://www.instagram.com/drakkades/`);
+        let actualDate = new Date();
+
+        if (actualDate.getSeconds() > this.lastUsage.getSeconds() + 5) {
+            client.say(channel, `Mon insta: https://www.instagram.com/drakkades/`);
+            this.lastUsage = actualDate;
+        }
     }
 
     isValid(command) {

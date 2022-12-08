@@ -6,8 +6,17 @@ const aliases = [
 
 class Rs {
 
+    constructor() {
+        this.lastUsage = new Date();
+    }
+
     execute(client, tags, message, channel) {
-        client.say(channel, `Mes réseaux: Instragam: https://www.instagram.com/drakkades/ Twitter: https://twitter.com/Drakkades Discord: https://discord.gg/Kv9wzS8 Youtube: https://www.youtube.com/@drakkades VOD: https://www.youtube.com/@drakkadesvod`);
+        let actualDate = new Date();
+
+        if (actualDate.getSeconds() > this.lastUsage.getSeconds() + 5) {
+            client.say(channel, `Mes réseaux: Instragam: https://www.instagram.com/drakkades/ Twitter: https://twitter.com/Drakkades Discord: https://discord.gg/Kv9wzS8 Youtube: https://www.youtube.com/@drakkades VOD: https://www.youtube.com/@drakkadesvod`);
+            this.lastUsage = actualDate;
+        }
     }
 
     isValid(command) {

@@ -5,8 +5,17 @@ const aliases = [
 
 class Youtube {
 
+    constructor() {
+        this.lastUsage = new Date();
+    }
+
     execute(client, tags, message, channel) {
-        client.say(channel, `Mon Youtube: https://www.youtube.com/@drakkades Les VOD: https://www.youtube.com/@drakkadesvod`);
+        let actualDate = new Date();
+
+        if (actualDate.getSeconds() > this.lastUsage.getSeconds() + 5) {
+            client.say(channel, `Mon Youtube: https://www.youtube.com/@drakkades Les VOD: https://www.youtube.com/@drakkadesvod`);
+            this.lastUsage = actualDate;
+        }
     }
 
     isValid(command) {

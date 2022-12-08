@@ -56,3 +56,8 @@ client.on('message', (channel, tags, message, self) => {
         }
     }
 });
+
+//Events when a user has been banned
+client.on('ban', (channel, username, reason, userstate) => {
+    // Do your stuff.
+});

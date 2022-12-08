@@ -4,9 +4,18 @@ const aliases = [
 ]
 
 class Echo {
+    
+    constructor() {
+        this.lastUsage = new Date();
+    }
 
     execute(client, tags, message, channel) {
-        client.say(channel, `${tags.username}, tu as dit: "${args.join(' ')}"`);
+        let actualDate = new Date();
+
+        if (actualDate.getSeconds() > this.lastUsage.getSeconds() + 5) {
+            client.say(channel, `${tags.username}, tu as dit: "${message}"`);
+            this.lastUsage = actualDate;
+        }
     }
 
     isValid(command) {
