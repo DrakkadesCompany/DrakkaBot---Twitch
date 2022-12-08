@@ -4,7 +4,7 @@ const aliases = [
 ]
 
 class Echo {
-    
+
     constructor() {
         this.lastUsage = new Date();
     }
@@ -13,7 +13,7 @@ class Echo {
         let actualDate = new Date();
 
         if (actualDate.getSeconds() > this.lastUsage.getSeconds() + 5) {
-            client.say(channel, `${tags.username}, tu as dit: "${message}"`);
+            client.say(channel, `${tags.username}, tu as dit: "{message}"`);
             this.lastUsage = actualDate;
         }
     }

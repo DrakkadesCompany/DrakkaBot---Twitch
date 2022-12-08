@@ -2,6 +2,14 @@ const tmi = require('tmi.js');
 const path = require('path');
 const fs = require('fs');
 
+const messageList = [
+    'Viens me sucer sur mon live stp : funix',
+    'deux on sait jamais',
+    'trois pour test'
+]
+
+let messageCursor = 0;
+
 const client = new tmi.Client({
     options: { debug: true },
     connection: {
@@ -57,7 +65,15 @@ client.on('message', (channel, tags, message, self) => {
     }
 });
 
-//Events when a user has been banned
-client.on('ban', (channel, username, reason, userstate) => {
-    // Do your stuff.
+client.on("connected", (address, port) => {
+    setInterval(executeAutoMessages, 1000 * 5);
 });
+
+function executeAutoMessages() {
+    client.say('drakkades', messageList[messageCursor]);
+    ++messageCursor;
+
+    if (messageCursor > messageList.length - 1) {
+        messageCursor = 0;
+    }
+}
