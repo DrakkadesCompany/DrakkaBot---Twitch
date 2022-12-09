@@ -3,9 +3,8 @@ const path = require('path');
 const fs = require('fs');
 
 const messageList = [
-    'Viens me sucer sur mon live stp : funix',
-    'deux on sait jamais',
-    'trois pour test'
+    'Hey ! Rejoint moi sur Twitter ou Instragam: https://twitter.com/Drakkades https://www.instagram.com/drakkades/',
+    'Regarde mon contenue sur Youtube: https://www.youtube.com/@drakkades et les VOD: https://www.youtube.com/@drakkadesvod',
 ]
 
 let messageCursor = 0;
