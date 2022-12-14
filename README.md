@@ -1,5 +1,5 @@
 # DrakkaBot
-Bot_Twitch_2022 Drakkabot
+Bot_Twitch_2022 Drakkabot - Twitch
 
 https://tmijs.com/#guide
 
