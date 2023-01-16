@@ -1,9 +1,9 @@
-const commandName = "youtube";
+const commandName = "manon";
 const aliases = [
-    "yt",
+    "manon_twi",
 ]
 
-class Youtube {
+class Manon {
 
     constructor() {
         this.lastUsage = new Date();
@@ -13,7 +13,7 @@ class Youtube {
         let actualDate = new Date();
 
         if (actualDate.getSeconds() > this.lastUsage.getSeconds() + 5) {
-            client.say(channel, `Mon Youtube: https://www.youtube.com/@drakkades`);
+            client.say(channel, `Best Modo, pas comme Arbogrill`);
             this.lastUsage = actualDate;
         }
     }
@@ -32,4 +32,4 @@ class Youtube {
     }
 }
 
-module.exports = Youtube;
+module.exports = Manon;
