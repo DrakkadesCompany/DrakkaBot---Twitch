@@ -1,6 +1,6 @@
-const commandName = "VOD";
+const commandName = "vod";
 const aliases = [
-    "rediff",
+    "rediff"
 ]
 
 class Vod {
@@ -20,6 +20,7 @@ class Vod {
 
     isValid(command) {
         if (command === commandName) {
+            console.log('ça passe dedabns')
             return true;
         } else {
             for (let i = 0; i < aliases.length; ++i) {

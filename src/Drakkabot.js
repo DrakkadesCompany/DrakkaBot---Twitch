@@ -64,9 +64,7 @@ client.on('message', (channel, tags, message, self) => {
     }
 });
 
-client.on("connected", (address, port) => {
-    setInterval(executeAutoMessages, 1000 * 60 * 35);
-});
+setInterval(executeAutoMessages, 1000 * 60 * 35);
 
 function executeAutoMessages() {
     client.say('drakkades', messageList[messageCursor]);
