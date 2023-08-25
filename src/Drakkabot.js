@@ -3,8 +3,9 @@ const path = require('path');
 const fs = require('fs');
 
 const messageList = [
-    'Hey ! Rejoint moi sur Twitter ou Instragam: https://twitter.com/Drakkades https://www.instagram.com/drakkades/',
+    'Hey ! Rejoint moi sur Twitter: https://twitter.com/Drakkades ou sur Instragam: https://www.instagram.com/drakkades/',
     'Regarde mon contenue sur Youtube: https://www.youtube.com/@drakkades et les VOD: https://www.youtube.com/@drakkadesvod',
+    'Tous les réseaux sociaux son sur http://drakkades.com/',
 ]
 
 let messageCursor = 0;
