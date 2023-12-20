@@ -3,9 +3,10 @@ const path = require('path');
 const fs = require('fs');
 
 const messageList = [
-    'Hey ! Rejoint moi sur Twitter: https://twitter.com/Drakkades ou sur Instragam: https://www.instagram.com/drakkades/',
-    'Regarde mon contenue sur Youtube: https://www.youtube.com/@drakkades et les VOD: https://www.youtube.com/@drakkadesvod',
-    'Tous les réseaux sociaux son sur http://drakkades.com/',
+    'Si tu veux, tous les réseaux sociaux sont sur https://drakkades.com/',
+    'Hey ! Rejoint moi sur Instragam à https://www.instagram.com/drakkades/ j\'annonce tout les lives ici !!!',
+    'Regarde les VOD sur https://www.youtube.com/@drakkadesvod',
+    'Un jour y aura du contenue sur Youtube https://www.youtube.com/@drakkades ou sur Twitter https://twitter.com/Drakkades',
 ]
 
 let messageCursor = 0;
@@ -65,7 +66,7 @@ client.on('message', (channel, tags, message, self) => {
     }
 });
 
-setInterval(executeAutoMessages, 1000 * 60 * 35);
+setInterval(executeAutoMessages, 1000 * 60 * 25);
 
 function executeAutoMessages() {
     client.say('drakkades', messageList[messageCursor]);
