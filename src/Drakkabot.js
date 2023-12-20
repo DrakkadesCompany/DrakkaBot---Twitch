@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 
 const messageList = [
-    'Si tu veux, tous les réseaux sociaux sont sur https://drakkades.com/',
+    'Si tu veux, tous les réseaux sociaux sont sur https://drakkades.com',
     'Hey ! Rejoint moi sur Instragam à https://www.instagram.com/drakkades/ j\'annonce tout les lives ici !!!',
     'Regarde les VOD sur https://www.youtube.com/@drakkadesvod',
     'Un jour y aura du contenue sur Youtube https://www.youtube.com/@drakkades ou sur Twitter https://twitter.com/Drakkades',

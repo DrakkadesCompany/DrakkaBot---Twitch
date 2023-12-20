@@ -1,6 +1,7 @@
 const commandName = "ig";
 const aliases = [
     "insta",
+    "instagram",
     "instagrame",
 ]
 

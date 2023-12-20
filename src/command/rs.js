@@ -14,7 +14,7 @@ class Rs {
         let actualDate = new Date();
 
         if (actualDate.getSeconds() > this.lastUsage.getSeconds() + 5) {
-            client.say(channel, `Mes réseaux: Instragam: https://www.instagram.com/drakkades/ Twitter: https://twitter.com/Drakkades Discord: https://discord.gg/Kv9wzS8 Youtube: https://www.youtube.com/@drakkades VOD: https://www.youtube.com/@drakkadesvod`);
+            client.say(channel, `Mes réseaux sont sur https://drakkades.com`);
             this.lastUsage = actualDate;
         }
     }
